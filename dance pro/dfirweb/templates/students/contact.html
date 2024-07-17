@@ -1,0 +1,72 @@
+<!-- students/templates/students/contact.html -->
+{% extends 'students/base.html' %}
+{% load static %}
+
+{% block title %}Contact Us - RD Dance Academy{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="bg-image" >
+        <div class="container text-center">
+            <h2 class="mb-4">Contact Our Coaches</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card p-3 shadow-lg">
+                        <h4>Coach 1- Divika Dhake</h4>
+                        <p>Phone: +1 234 567 8901</p>
+                        <p>Email: divikadhake@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card p-3 shadow-lg">
+                        <h4>Coach 2- Aatmika Dhake</h4>
+                        <p>Phone: +1 234 567 8902</p>
+                        <p>Email: aatmika2@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card p-3 shadow-lg">
+                        <h4>Coach 3- Durvesh Dhake</h4>
+                        <p>Phone: +1 234 567 8903</p>
+                        <p>Email: durvesh@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card p-3 shadow-lg">
+                        <h4>Coach 4- Madhuri Dhake</h4>
+                        <p>Phone: +1 234 567 8904</p>
+                        <p>Email: madhuri@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card p-3 shadow-lg">
+                        <h4>Coach 5- Vinod Dhake</h4>
+                        <p>Phone: +1 234 567 8905</p>
+                        <p>Email: vinod@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .bg-image {
+        background-image: url('{% static "students/contact_bg.jpg" %}'); 
+        background-size: cover; 
+        background-position: center; 
+        padding: 50px; 
+        color: black;
+    }
+    .card {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: black;
+    }
+    .card h4 {
+        margin-bottom: 15px;
+        color: black;
+    }
+</style>
+{% endblock %}

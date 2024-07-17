@@ -1,0 +1,161 @@
+{% extends 'students/base.html' %}
+{% load static %}
+
+{% block title %}About Us - RD Dance Academy{% endblock %}
+
+{% block content %}
+<!-- Main content container -->
+<div class="container mt-5">
+    <!-- Background Image Section -->
+    <div class="bg-image text-center text-white py-5">
+        <h2 class="mb-4">About RD Dance Academy</h2>
+        <p class="lead">Welcome to RD Dance Academy, where we nurture the talent of aspiring dancers. Our academy offers a variety of dance forms taught by experienced instructors. Join us to learn and master your favorite dance styles!</p>
+        <p class="lead">RD Dance Academy was founded in 2010 and has been inspiring dancers for over a decade.</p>
+    </div>
+
+    <!-- Dance Forms Section -->
+    <div class="container mt-5">
+        <h3 class="text-center mb-4">Dance Forms We Teach</h3>
+        <div class="row">
+            <!-- Ballet -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Ballet</h4>
+                        <p class="card-text">Classical ballet training focusing on technique, grace, and poise.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Hip Hop -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Hip Hop</h4>
+                        <p class="card-text">Energetic and street-style dance form with a focus on rhythm and improvisation.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Contemporary -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Contemporary</h4>
+                        <p class="card-text">Modern dance style that blends elements of ballet, jazz, and other genres.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Salsa -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Salsa</h4>
+                        <p class="card-text">Latin dance known for its vibrant and rhythmic movements.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Jazz -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Jazz</h4>
+                        <p class="card-text">Dynamic dance form that incorporates elements of ballet and modern dance.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Tap -->
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Tap</h4>
+                        <p class="card-text">Dance style characterized by rhythmical tapping of the feet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Photos Section -->
+    <div class="container mt-5">
+        <h3 class="text-center mb-4">Our Academy Pictures</h3>
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <img src="{% static 'students/photo1.avif' %}" class="img-fluid rounded shadow-sm" alt="Dance Academy 1">
+            </div>
+            <div class="col-md-3 mb-4">
+                <img src="{% static 'students/photo2.jpg' %}" class="img-fluid rounded shadow-sm" alt="Dance Academy 2">
+            </div>
+            <div class="col-md-3 mb-4">
+                <img src="{% static 'students/photo3.jpg' %}" class="img-fluid rounded shadow-sm" alt="Dance Academy 3">
+            </div>
+            <div class="col-md-3 mb-4">
+                <img src="{% static 'students/photo4.jpg' %}" class="img-fluid rounded shadow-sm" alt="Dance Academy 4">
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing and Offers Section -->
+    <div class="container mt-5">
+        <h3 class="text-center mb-4">Pricing and Offers</h3>
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <p class="card-text">Join RD Dance Academy today! We offer competitive pricing and special discounts for new members. Contact us for more details about our pricing and current offers.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Marquee Section -->
+<div class="marquee-container">
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+        <p class="mb-0">Address: 1234 Elite Dance Avenue, Premier City, USA | Email: RDanceAcademy23@gmail.com</p>
+    </marquee>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .bg-image {
+        background-image: url('{% static "students/about_bg.webp" %}');
+        background-size: cover;
+        background-position: center;
+        padding: 50px;
+        color: white;
+    }
+    .marquee-container {
+        background-color: #f8f9fa;
+        padding: 10px;
+        margin-top: 0;
+        text-align: center;
+    }
+    .marquee-container p {
+        margin: 0;
+    }
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .card-text {
+        font-size:15px;
+        
+    }
+    .mb-4 {
+        margin-top: -10px;
+        color: black;
+        font-weight: bold;
+    }
+    .lead {
+        margin-top: 0;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .mb-0 {
+        background-color: lightsalmon;
+        font-size: 25px;
+    }
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+{% endblock %}

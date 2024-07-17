@@ -1,0 +1,59 @@
+{% extends 'students/base.html' %}
+{% load static %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+<!-- Background Image Section -->
+<div class="bg-register">
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Register for Dance Classes</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card p-4 shadow-lg">
+                    <center>
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .bg-register {
+        background-image: url('{% static "students/register_bg.jpg" %}');
+        background-size: cover;
+        background-position: center;
+        padding: 50px 0;
+        color: white;
+    }
+    .card {
+        background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for the form card */
+        color: black;
+    }
+    .btn-primary {
+        background-color: dodgerblue;
+        border-color: black;
+
+    }
+    .btn-primary:hover {
+        background-color: white;
+        border-color: black;
+        color: black;
+    }
+    h2{
+        color: black;
+    }
+    button{
+        color: black;
+        margin-left: 30px;
+    }
+</style>
+{% endblock %}
